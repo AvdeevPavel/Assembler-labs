@@ -1,0 +1,9 @@
+#!/bin/bash -ev
+
+if [ ! -d tmp ]; then
+   mkdir tmp
+fi
+make
+sudo mount boot_img tmp
+sudo cp kernel.mnt tmp/
+sudo umount tmp
