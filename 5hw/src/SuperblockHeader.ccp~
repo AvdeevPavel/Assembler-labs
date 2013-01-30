@@ -1,0 +1,8 @@
+#include "Superblock/SuperblockHeader.h"
+
+void* SuperblockHeader::malloc() { 
+	return nullptr; 
+} 
+
+void SuperblockHeader::free(void *ptr);
+	 
