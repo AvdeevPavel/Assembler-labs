@@ -53,7 +53,7 @@ void* BinManager<superblock_type, emptiness_frac>::malloc(size_t size) {
 template<class superblock_type, size_t emptiness_frac>
 void BinManager<superblock_type, emptiness_frac>::free(void *ptr, superblock_type *sb) { 
 #ifdef M_DEBUG
-	std::cerr << "BinManger::free( " << ptr << " " << static_cast<void*> size << " )" << std::endl;
+	std::cerr << "BinManger::free( " << ptr << " " << static_cast<void*>(sb) << " )" << std::endl;
 #endif	
 
 	const size_t old_degree = get_emptiness_degree(sb);
